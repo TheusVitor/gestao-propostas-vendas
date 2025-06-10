@@ -25,12 +25,17 @@ Aplicação Laravel para gerenciar propostas de venda.
    ```bash
    docker compose up -d --build
    ```
-4. Rode migrations e seeders:
+4. Gerar a chave:
+
+   ```bash
+   docker compose exec app php artisan key:generate
+   ```
+5. Rode migrations e seeders:
 
    ```bash
    docker compose exec app php artisan migrate:fresh --seed
    ```
-5. Acesse no navegador:
+6. Acesse no navegador:
 
    ```
    http://localhost:8000/login
